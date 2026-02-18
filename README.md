@@ -1,1 +1,1 @@
-# VMware-Hybrid-DevOps-Lab
+# VMware-Hybrid-DevOps
