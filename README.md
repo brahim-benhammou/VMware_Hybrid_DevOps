@@ -1,4 +1,10 @@
-# VMware Hybrid DevOps Lab: Infrastructure Design
+# VMware Infrastructure Design
+## Goal
+
+Design a segmented and highly available VMware infrastructure platform that supports reliable operations, automation workflows, and realistic lab testing aligned with enterprise architecture practices.
+## Purpose
+
+Provide a stable foundation for testing infrastructure automation, high availability features, and workload deployment scenarios in a controlled lab environment.
 
 ## 1. Physical Hardware Inventory (The "Underlay")
 
@@ -16,7 +22,7 @@
 | VLAN ID | Name | Subnet (CIDR) | Gateway | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
 | **VLAN 1** | WAN Uplink | DHCP / ISP | ISP Gateway | Internet Edge |
-| **VLAN 10** | Management | 10.10.10.0/24 | 10.10.10.1 | ESXi, vCenter, AD, DNS |
+| **VLAN 10** | Management | 10.10.10.0/24 | 10.10.10.1 | ESXi, vCenter, AD, DNS, firewall  |
 | **VLAN 20** | vMotion | 10.10.20.0/24 | 10.10.20.1 | 10Gb Live VM Migration |
 | **VLAN 30** | vSAN/Storage | 10.10.30.0/24 | 10.10.30.1 | 10Gb SSD Data Traffic |
 | **VLAN 100** | VM Network | 10.10.100.0/24 | 10.10.100.1 | Ubuntu VMs / App Factory |
